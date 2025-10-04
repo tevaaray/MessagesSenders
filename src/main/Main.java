@@ -14,28 +14,28 @@ import main.sender.SMSSender;
  */
 public class Main {
     public static void main(String[] args) {
-        // 1️⃣ Create and send a TextMessage via Email
+        // 1 Create and send a TextMessage via Email
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println("📤 Sending a Text Message via Email");
         Message textViaEmail = new TextMessage(new EmailSender());
         textViaEmail.send("Hello from Bridge Pattern via Email!");
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
-        // 2️⃣ Create and send a TextMessage via SMS
+        // 2 Create and send a TextMessage via SMS
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println("📤 Sending a Text Message via SMS");
         Message textViaSMS = new TextMessage(new SMSSender());
         textViaSMS.send("This is a text message sent via SMS.");
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
-        // 3️⃣ Create and send a PushMessage via Push
+        // 3 Create and send a PushMessage via Push
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println("📤 Sending a Push Message via Push Notification");
         Message pushViaPush = new PushMessage(new PushSender());
         pushViaPush.send("Push notification sent successfully!");
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
-        // 4️⃣ Create and send a PushMessage via Email
+        // 4 Create and send a PushMessage via Email
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println("📤 Sending a Push Message via Email");
         Message pushViaEmail = new PushMessage(new EmailSender());
